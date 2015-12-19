@@ -1,0 +1,54 @@
+商品类型表：新增字段有服务进程个数,是否删除两个字段，修改有商品类型流程图换成商品类型图标
+create table product_type
+(
+   product_type_id      int(11) not null auto_increment comment '商品类型ID',
+   type_name            varchar(64) comment '类型名称',
+   pic_path             varchar(255) comment '商品类型图标',
+   course_num           int(1) comment '服务进程个数',
+   isdelete             int(1) comment '是否删除',
+   create_time          datetime comment '创建时间',
+   modify_time          datetime default NULL comment '修改时间',
+   primary key (product_type_id)
+);
+
+信息发布表：新增字段有图片路径，发布人,是否删除三个字段
+create table info_diss
+(
+   info_id              int(11) not null auto_increment comment '信息ID',
+   title                varchar(128) comment '标题',
+   ann_type             int(1) comment '类型1:普通 2:重要,3奖励,4促销',
+   path                 char(10) comment '图片路径',
+   publisher            varchar(50) comment '发布人',
+   context              text comment '内容',
+   summary              varchar(500) comment '摘要',
+   isdelete             int(1) comment '是否删除',
+   create_time          datetime comment '创建时间',
+   modify_time          datetime default NULL comment '修改时间',
+   primary key (info_id)
+);
+
+
+服务进程表：新增字段有状态一个字段
+create table feedback
+(
+   feedback_id          int(11) not null auto_increment comment '信息反馈id',
+   work_order_id        int(11) comment '工单id',
+   service_pro_name     varchar(64) comment '服务进程名称',
+   status               int(1) comment '状态',
+   context              text comment '内容',
+   create_time          datetime comment '创建时间',
+   modify_time          datetime default NULL comment '修改时间',
+   primary key (feedback_id)
+);
+
+create table feedback_status
+(
+   product_type_id      int(11) auto_increment comment '商品类型ID',
+   feedback_status_id   int(11) not null comment '服务进程状态ID',
+   status_num           int(1) comment '状态序号',
+   status_name          varchar(255) comment '状态名称',
+   isdelete             int(1) comment '是否删除',
+   create_time          datetime comment '创建时间',
+   modify_time          datetime default NULL comment '修改时间',
+   primary key (feedback_status_id)
+);

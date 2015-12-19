@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tasks>
+	<task>
+		<id>SUSTAINABLEPROJECTTASK</id>
+		<task-class>com.biostime.customer.service.SustainableProjectTask</task-class>
+		<describle>查找90天内可持续项目</describle>
+		<!-- 是否启动 -->
+		<start>true</start>
+		<!-- 启动延时时间 单位 毫秒 -->
+		<delay>10</delay>
+		<!-- 时间间隔 单位 分钟 6*60 -->
+		<scheTime>360</scheTime>
+	</task>
+	<task>
+		<id>PUSHTASK</id>
+		<task-class>com.biostime.customer.service.PushTask</task-class>
+		<describle>推送</describle>
+		<!-- 是否启动 -->
+		<start>true</start>
+		<!-- 启动延时时间 单位 毫秒 -->
+		<delay>10</delay>
+		<!-- 时间间隔 单位 分钟 -->
+		<scheTime>5</scheTime>
+	</task>
+	<task>
+		<id>QUERYEXPIRYDATETASK</id>
+		<task-class>com.biostime.customer.service.QueryExpiryDateTask</task-class>
+		<describle>得到最新的客户到期时间</describle>
+		<!-- 是否启动 -->
+		<start>true</start>
+		<!-- 启动延时时间 单位 毫秒 -->
+		<delay>10</delay>
+		<!-- 时间间隔 单位 分钟 -->
+		<scheTime>360</scheTime>
+	</task>
+</tasks>

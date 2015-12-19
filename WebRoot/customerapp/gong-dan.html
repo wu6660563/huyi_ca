@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<title>工单详情</title>
+	<meta charset=utf-8>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/> 
+	<link rel="stylesheet" href="style/kefu.css" />
+	<link rel="stylesheet" href="style/normalize.css" />
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script>
+		$(document).ready(function(){
+			var span=$('.tab').children('span');
+			span.on('click',function(){
+				$(this).addClass('current').siblings().removeClass('current');
+				var _index=$('.tab > span').index(this);
+				$('.gongdan').find('.gd-c').eq(_index).show().siblings().hide();
+			});
+			setInterval("showImg('.b-ad')",3000);
+		});
+
+		function showImg(obj) {
+			var _ul=$(obj).find('.ad-list');
+			var _height=$(obj).height();
+			_ul.animate({'margin-top':-_height},300,function(){
+				$(this).css({'margin-top':0}).find('li:first').appendTo(_ul);
+			})
+		}
+	</script>
+</head>
+<body>
+	<header id="header">
+		<div class="header-m">
+			<a href="#" class="back-btn">返回</a>
+			<h1>产品或服务名称</h1>
+			<a href="tel:13888888889" class="tel">电话</a>
+		</div>
+	</header>
+	<div id="main">
+		<nav class="tab">
+			<span class="current">服务进程信息反馈</span>
+			<span>标准办事流程查看</span>
+		</nav>
+		<section class="gongdan">
+			<div class="gd-c" style="display:block">
+				<dl class="gd-list">
+					<dd>
+						<h2>进展情况</h2>
+						<time>2014-04-25 12:23</time>
+						<p class="gd-desc">
+							情况描述情况描述情况描述情况描述情况描述情况描述情况描述情况描述情况描述情况描述情况描述情况描述情况描述情况描述情况描述情况描述情况描述情况描
+						</p>
+					</dd>
+				</dl>
+			</div>
+			<div class="gd-c">
+				<div class="process"">
+						<img src="img/2.png" />
+				</div>
+			</div>
+		</section>
+	</div><!--main-->
+
+	<footer id="footer">
+		<div class="b-ad">
+			<ul class="ad-list">
+				<li><a href="#"><img src="img/ad.png" /></a></li>
+				<li><a href="#"><img src="img/3.png" /></a></li>
+				<li><a href="#"><img src="img/1.jpg" /></a></li>
+				<li><a href="#"><img src="img/3.png" /></a></li>
+			</ul>
+		</div>
+	</footer>
+	
+</body>
+</html>

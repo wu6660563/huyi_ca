@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<title>首页</title>
+	<meta charset=utf-8>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/> 
+	<link rel="stylesheet" href="style/kefu.css" />
+	<link rel="stylesheet" href="style/normalize.css" />
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script>
+		$(document).ready(function(){
+			setInterval("showImg('.b-ad')",3000);
+		});
+
+		function showImg(obj) {
+			var _ul=$(obj).find('.ad-list');
+			var _height=$(obj).height();
+			_ul.animate({'margin-top':-_height},300,function(){
+				$(this).css({'margin-top':0}).find('li:first').appendTo(_ul);
+			})
+		}
+	</script>
+</head>
+<body>
+	<div id="main">
+		<section class="card">
+			<div class="card-left">
+				<h3 class="c-tit">中国天天向上有限公司</h3>
+				<p>联系人：杨天天</p>
+				<p>电话：13922222222</p>
+			</div>
+			<span class="card-img">
+				<img src="img/pai.png"/>
+			</span>
+		</section><!--card-->
+
+		<section class="box">
+			<h2 class="hd"><span>金牌</span>服务承诺</h2>
+			<div class="hm">
+				<p class="service-txt">金牌服务权益说明金牌服务权益说明金牌服务权益说明金牌服务权益说明金牌服务权益说明金牌服务权益说明金牌服务权益说明金牌服务权益说明金牌服务权益说明</p>
+			</div>
+		</section>
+
+		<section class="box">
+			<h2 class="hd"><span>你</span>2014年4月11日购买的服务</h2>
+			<div class="hm">
+				<h3 class="c-tit">合同号：543253415</h3>
+				<p>合作金额：5万</p>
+				<p>责任商务代表：王小姐</p>
+				<span class="confirm">待确认</span>
+			</div>
+			<ul class="xm-list">
+				<li>
+					<a href="gong-dan.html">
+						<h5><span class="xm-sb left">[商标]</span><span class="xm-tit left">购买项目名称</span><span class="xm-jc right">查看进程</span></h5>
+						<p><span>单价 50000元</span><span>服务年限 3年</span></p>
+						<p><span>于2014年3月15日到期</span></p>
+					</a>
+				</li>
+				<li>
+					<a href="gong-dan.html">
+						<h5><span class="xm-sb left">[商标]</span><span class="xm-tit left">购买项目名称</span><span class="xm-jc right">查看进程</span></h5>
+						<p><span>单价 5万</span><span>服务年限 3年</span></p>
+						<p><span>于2014年3月15日到期</span></p>
+					</a>
+				</li>
+			</ul>
+		</section>
+
+		<section class="box">
+			<h2 class="hd"><span>你</span>2014年3月15日购买的服务</h2>
+			<div class="hm">
+				<h3 class="c-tit">合同号：543253415</h3>
+				<p>合作金额：500万</p>
+				<p>责任商务代表：王小姐</p>
+				<span class="confirm on-confirm">已确认</span>
+			</div>
+			<ul class="xm-list">
+				<li>
+					<a href="gong-dan.html">
+						<h5><span class="xm-sb left">[商标]</span><span class="xm-tit left">购买项目名称</span><span class="xm-jc right">查看进程</span></h5>
+						<p><span>单价 888万</span><span>服务年限 3年</span></p>
+						<p><span>于2014年3月15日到期</span></p>
+					</a>
+				</li>
+				<li>
+					<a href="gong-dan.html">
+						<h5><span class="xm-sb left">[商标]</span><span class="xm-tit left">购买项目名称</span><span class="xm-jc right">查看进程</span></h5>
+						<p><span>单价 50万</span><span>服务年限 3年</span></p>
+						<p><span>于2014年3月15日到期</span></p>
+					</a>
+				</li>
+			</ul>
+		</section>
+	</div><!--main-->
+
+	<footer id="footer">
+		<div class="b-ad">
+			<ul class="ad-list">
+				<li><a href="#"><img src="img/ad.png" /></a></li>
+				<li><a href="#"><img src="img/3.png" /></a></li>
+				<li><a href="#"><img src="img/1.jpg" /></a></li>
+				<li><a href="#"><img src="img/3.png" /></a></li>
+			</ul>
+		</div>
+	</footer>
+</body>
+</html>

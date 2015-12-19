@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>注册</title>
+<meta charset=utf-8>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/> 
+<link rel="stylesheet" href="style/huyi.css" />
+<script src="js/zepto.min.js"></script>
+</head>
+<body>
+	<header id="header">
+		<a class="backBtn"></a>
+		<h2 class="title">用户注册</h2>
+	</header>
+
+	<div id="main">
+		<section class="edit-list">
+			<ul>
+				<li><label>公司名</label><div class="right-ipnut"><input type="text" placeholder="请输入公司名" /></div></li>
+				<li><label>联系人</label><div class="right-ipnut"><input type="text" placeholder="请输入联系人" /></div></li>
+				<li><label>手机号</label><div class="right-ipnut"><input type="tel" placeholder="请输入手机号码" /></div></li>
+				<li><label>验证码</label><div class="right-ipnut"><input type="text" class="getCode" placeholder="请输入验证码" /><a class="codeBtn">获取验证码</a></div></li>
+				<li><label>密码</label><div class="right-ipnut"><input type="password" placeholder="请输入密码" /></div></li>
+				<li><label>确认密码</label><div class="right-ipnut"><input type="password" placeholder="请输入确认密码" /></div></li>
+			</ul>			
+		</section>
+		<a class="saveBtn regBtn">注册</a>
+	</div>
+
+	<script>
+		$('.codeBtn').on('tap',function(){
+			$(this).addClass('onBtn');
+		});
+
+		 $('.backBtn').on({
+			touchstart:function(){
+				$(this).addClass('current');
+			},
+			touchend:function(){
+				$(this).removeClass('current');
+			}
+		 })
+	</script>
+</body>
+</html>
